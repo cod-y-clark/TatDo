@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Cody Clark",
+      "email": "cody@cody.com",
+      "password": "123"
+    },
+    {
+      "name": "Diddy Kong",
+      "email": "diddy@kong.net",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "Hotdog",
+      "email": "mrhotdog@hotdog.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "William Cody Clark",
+      "email": "cody66clark@gmail.com",
+      "password": "123",
+      "id": 4
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Chad Koeplinger",
+      "ig_url": "https://www.instagram.com/chadkoeplingertattoo/?hl=en",
+      "location": "Nashville, TN"
+    },
+    {
+      "name": "Julian Bast",
+      "ig_url": "https://www.instagram.com/julianbast/",
+      "location": "Ann Arbor, MI",
+      "id": 2
+    }
+  ],
+  "ideas": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "artist_id": 1,
+      "desc": "seraphim eagle",
+      "body_loc": "chest",
+      "budget": 1500,
+      "color": "color",
+      "appt_date": "2021-07-24",
+      "completed": false,
+      "comp_date": null
+    }
+  ]
+}

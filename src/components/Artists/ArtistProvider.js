@@ -7,7 +7,7 @@ export const ArtistProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
     
     const getArtists = () => {
-        return fetch(`http://localhost:8088/artists`)
+        return fetch(`http://localhost:8088/artists?_expand=userId`)
         .then(r => r.json())
         .then(setArtists)
     }

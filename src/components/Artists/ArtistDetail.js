@@ -20,7 +20,7 @@ export const ArtistDetail = (props) => {
 
     useEffect(() => {getArtists()}, [])
 
-    const handleDelete = () => {
+    const handleDeleteArtist = () => {
         deleteArtist(artist.id)
         .then(() => {
             history.push("/artists")
@@ -31,12 +31,12 @@ export const ArtistDetail = (props) => {
 
     return (
     <section className="artist">
-        <h3 className="artist__name">{ artist.name }</h3>
-        <div className="artist__ig">{ artist.ig_url }</div>
-        <div className="artist__location">{ artist.location }</div>
+        <div className="artist__name"><b>{ artist.name }</b></div>
+        <div className="artist__ig"><b>Instagram:</b> <a href={ artist.ig_url } target="_blank">{ artist.ig_url }</a></div>
+        <div className="artist__location"><b>Location:</b> { artist.location }</div>
 
         <button onClick={() => {history.push(`/artists/edit/${artist.id}`)}}>Edit</button>
-        <button onClick={handleDelete}>Delete Artist</button>
+        <button onClick={handleDeleteArtist}>Delete Artist</button>
     </section>
     )
 }

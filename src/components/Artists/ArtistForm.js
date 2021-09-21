@@ -54,30 +54,30 @@ export const ArtistForm = () => {
     }, [])
 
     return (
-        <form className="artistform">
-            <h2 className="artistForm__title">Add Artist</h2>
+        <form className="artistForm">
+            <h2 className="artistForm__title"><b>Add Artist</b></h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name">Artist Name: </label>
+                    <label htmlFor="name"><b>Artist Name:</b> </label>
                     <input type="text" id="name" name="name" required autoFocus className="form-control"
                         placeholder="Artist Name" onChange={handleControlledInputChange} defaultValue={artist.name} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="ig_url">Instagram Profile: </label>
+                    <label htmlFor="ig_url"><b>Instagram Profile:</b> </label>
                     <input type="url" id="ig_url" name="ig_url" required autoFocus className="form-control"
                         placeholder="Instagram Profile" onChange={handleControlledInputChange} defaultValue={artist.ig_url} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="location">Artist Location: </label>
+                    <label htmlFor="location"><b>Artist Location:</b> </label>
                     <input type="text" id="location" name="location" required autoFocus className="form-control"
                         placeholder="Artist Location" onChange={handleControlledInputChange} defaultValue={artist.location} />
                 </div>
             </fieldset>
-            <button className="btn artistform" disabled={isLoading} onClick={event => {
+            <button className="btn artistForm" disabled={isLoading} onClick={event => {
                 event.preventDefault()
                 handleSaveArtist()
             }}>

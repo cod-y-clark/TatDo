@@ -21,6 +21,9 @@ export const ArtistForm = () => {
     }
 
     const handleSaveArtist = () => {
+        if (!artist.name) {
+            window.alert("Please provide an artist name")
+        } else {
         setIsLoading(true)
         if (artistId) {
             editArtist({
@@ -38,6 +41,7 @@ export const ArtistForm = () => {
             })
                 .then(() => history.push("/artists"))
         }
+    }
     }
 
 

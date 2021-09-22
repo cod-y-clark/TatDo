@@ -7,24 +7,6 @@
       "password": "123"
     }
   ],
-  "artists": [
-    {
-      "name": "Julian Bast",
-      "ig_url": "https://www.instagram.com/julianbast/",
-      "location": "Ann Arbor, MI",
-      "id": 1
-    }
-  ],
-  "ideas": [
-    {
-      "id": 1,
-      "artist_id": 1,
-      "desc": "Panther man",
-      "body_loc": "stomach",
-      "budget": "700",
-      "color": "Color",
-      "appt_date": "2021-09-21",
-      "completed": ""
-    }
-  ]
+  "artists": [],
+  "ideas": []
 }

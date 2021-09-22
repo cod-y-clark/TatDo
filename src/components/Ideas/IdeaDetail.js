@@ -5,7 +5,7 @@ import "./Idea.css"
 
 export const IdeaDetail = (props) => {
     const { ideas, getIdeas, deleteIdea } = useContext (IdeaContext)
-    const [ idea, setIdea ] = useState([])
+    const [ idea, setIdea ] = useState({ artist: {} })
 
     const { ideaId } = useParams()
 
@@ -13,7 +13,7 @@ export const IdeaDetail = (props) => {
         if(props.idea){
             setIdea(props.idea)
         } else {
-            const thisIdea = idea.find(i => i.id === parseInt(ideaId)) || { idea: {} }
+            const thisIdea = idea.find(i => i.id === parseInt(ideaId)) || { artist: {} }
             setIdea(thisIdea)
         }
     }, [idea, ideas])
@@ -31,6 +31,7 @@ export const IdeaDetail = (props) => {
 
     return (
     <section className="idea">
+        <div className="idea__artist"><b>Artist:</b> { idea.artist.name }</div>
         <div className="idea__desc"><b>Tattoo description:</b> { idea.desc }</div>
         <div className="idea__body_loc"><b>Body location:</b> { idea.body_loc }</div>
         <div className="idea__budget"><b>Budget:</b> ${ idea.budget }</div>

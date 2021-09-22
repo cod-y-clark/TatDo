@@ -7,6 +7,13 @@
       "password": "123"
     }
   ],
-  "artists": [],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Julian Bastttt",
+      "ig_url": "https://www.instagram.com/julianbast/",
+      "location": "Ann Arbor, MI"
+    }
+  ],
   "ideas": []
 }

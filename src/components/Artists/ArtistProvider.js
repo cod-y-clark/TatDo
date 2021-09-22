@@ -7,7 +7,7 @@ export const ArtistProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
     
     const getArtists = () => {
-        return fetch(`http://localhost:8088/artists?_expand=userId`)
+        return fetch(`http://localhost:8088/artists?_expand `)
         .then(r => r.json())
         .then(setArtists)
     }
@@ -41,10 +41,7 @@ export const ArtistProvider = (props) => {
 
     const deleteArtist = artistId => {
         return fetch(`http://localhost:8088/artists/${artistId}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
+            method: "DELETE"
         })
         .then(getArtists)
     }

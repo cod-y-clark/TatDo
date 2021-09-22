@@ -9,13 +9,13 @@ export const IdeaForm = () => {
     const { artists, getArtists } = useContext(ArtistContext)
     const [idea, setIdea] = useState({
         user_id: "",
-        artist_id: "",
+        artistId: "",
         desc: "",
         body_loc: "",
         budget: "",
         color: "",
         appt_date: "",
-        completed: ""
+        completed: false
     });
     const [isLoading, setIsLoading] = useState(true);
     const { ideaId } = useParams();
@@ -28,12 +28,15 @@ export const IdeaForm = () => {
     }
 
     const handleSaveIdea = () => {
-        const artist_id = parseInt(idea.artist_id)
+        const artistId = parseInt(idea.artistId)
+        if (!idea.desc) {
+            window.alert("Please provide a description")
+        } else {
         setIsLoading(true)
         if (ideaId) {
             editIdea({
                 id: idea.id,
-                artist_id: parseInt(idea.artist_id),
+                artistId: parseInt(idea.artistId),
                 desc: idea.desc,
                 body_loc: idea.body_loc,
                 budget: idea.budget,
@@ -42,21 +45,9 @@ export const IdeaForm = () => {
                 completed: idea.completed
             })
                 .then(() => history.push("/ideas/"))
-        } else if (ideaId) {
-            editIdea({
-                id: idea.id,
-                artist_id: parseInt(idea.artist_id),
-                desc: idea.desc,
-                body_loc: idea.body_loc,
-                budget: idea.budget,
-                color: idea.color,
-                appt_date: idea.appt_date,
-                completed: idea.completed
-            })
-            .then(() => history.push("/ideas/"))
         } else {
             addIdea({
-                artist_id: parseInt(idea.artist_id),
+                artistId: parseInt(idea.artistId),
                 desc: idea.desc,
                 body_loc: idea.body_loc,
                 budget: idea.budget,
@@ -66,6 +57,7 @@ export const IdeaForm = () => {
             })
                 .then(() => history.push("/ideas"))
         }
+    }
     }
 
     useEffect(() => {
@@ -88,8 +80,8 @@ export const IdeaForm = () => {
 
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="artist_id"><b>Select Tattoo Artist:</b> </label>
-                    <select value={idea.artist_id} id="artist_id" name="artist_id" className="form-control"
+                    <label htmlFor="artistId"><b>Select Tattoo Artist:</b> </label>
+                    <select value={idea.artistId} id="artistId" name="artistId" className="form-control"
                     onChange={handleControlledInputChange}>
                         <option value="0">Select Tattoo Artist</option>
                         {artists.map(a => (

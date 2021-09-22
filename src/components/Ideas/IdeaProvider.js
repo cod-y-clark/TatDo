@@ -7,7 +7,7 @@ export const IdeaProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
 
     const getIdeas = () => {
-        return fetch(`http://localhost:8088/ideas?_expand=userId`)
+        return fetch(`http://localhost:8088/ideas?_expand=artist`)
         .then(r => r.json())
         .then(setIdeas)
     }
@@ -41,10 +41,7 @@ export const IdeaProvider = (props) => {
 
     const deleteIdea = ideaId => {
         return fetch(`http://localhost:8088/ideas/${ideaId}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
+            method: "DELETE"
         })
         .then(getIdeas)
     }

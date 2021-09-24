@@ -155,7 +155,7 @@ export const IdeaForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="final_cost"><b>Final Cost:</b> </label>
-                    <input type="number" id="final_cost" name="final_cost" required autoFocus className="form-control"
+                    <input type="number" id="finalCost" name="finalCost" required autoFocus className="form-control"
                     placeholder="Final Cost" onChange={handleControlledInputChange} defaultValue={idea.finalCost} />
                 </div>
             </fieldset>

@@ -1,19 +1,22 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import { IdeaContext } from "./IdeaProvider"
-import { IdeaDetail } from "./IdeaDetail"
+import { IncompIdeaDetail } from "./IncompIdeaDetail"
 import "./Idea.css"
 
-export const IdeaList = () => {
-    const { ideas, getIdeas, searchTerms } = useContext(IdeaContext)
+export const IncompIdeaList = () => {
+    const { ideas, getIncompleteIdeas, searchTerms } = useContext(IdeaContext)
     const [ filteredIdeas, setFiltered ] = useState([])
     const history = useHistory()
 
-    useEffect(() => {getIdeas()}, [])
+    useEffect(() => {getIncompleteIdeas()}, [])
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const subset = ideas.filter(idea => idea.desc.toLowerCase().includes(searchTerms.toLowerCase()))
+            const subset = ideas.filter(idea => (
+                idea.desc.toLowerCase().includes(searchTerms.toLowerCase()) ||
+                idea.artist.name.toLowerCase().includes(searchTerms.toLowerCase())
+            ))
             setFiltered(subset)
         } else {
             setFiltered(ideas)
@@ -30,7 +33,7 @@ export const IdeaList = () => {
             <div className="ideas">
             {
                 filteredIdeas.map(idea => {
-                    return <IdeaDetail key={idea.id} idea={idea} />
+                    return <IncompIdeaDetail key={idea.id} idea={idea} />
                 })
             }
             </div>

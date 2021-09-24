@@ -12,6 +12,18 @@ export const IdeaProvider = (props) => {
         .then(setIdeas)
     }
 
+    const getIncompleteIdeas = () => {
+        return fetch(`http://localhost:8088/ideas?completed=false&_expand=artist`)
+        .then(r => r.json())
+        .then(setIdeas)
+    }
+
+    const getCompleteIdeas = () => {
+        return fetch(`http://localhost:8088/ideas?completed=true&_expand=artist`)
+        .then(r => r.json())
+        .then(setIdeas)
+    }
+
     const getIdeaById = (ideaId) => {
         return fetch (`http://localhost:8088/ideas/${ideaId}`)
         .then(r => r.json())
@@ -48,7 +60,7 @@ export const IdeaProvider = (props) => {
 
     return (
         <IdeaContext.Provider value={{
-            ideas, setIdeas, getIdeas, getIdeaById, addIdea, searchTerms, setSearchTerms, editIdea, deleteIdea
+            ideas, setIdeas, getIdeas, getIncompleteIdeas, getCompleteIdeas, getIdeaById, addIdea, searchTerms, setSearchTerms, editIdea, deleteIdea
         }}>
             {props.children}
         </IdeaContext.Provider> 

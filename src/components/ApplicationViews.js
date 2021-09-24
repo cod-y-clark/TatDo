@@ -6,9 +6,11 @@ import { ArtistForm } from "./Artists/ArtistForm"
 import { ArtistList } from "./Artists/ArtistList"
 import { ArtistSearch } from "./Artists/ArtistSearch"
 import { IdeaProvider } from "./Ideas/IdeaProvider"
-import { IdeaDetail } from "./Ideas/IdeaDetail"
+import { IncompIdeaDetail } from "./Ideas/IncompIdeaDetail"
+import { CompIdeaDetail } from "./Ideas/CompIdeaDetail"
 import { IdeaForm } from "./Ideas/IdeaForm"
-import { IdeaList } from "./Ideas/IdeaList"
+import { IncompIdeaList } from "./Ideas/IncompIdeaList"
+import { CompIdeaList } from "./Ideas/CompIdeaList"
 import { IdeaSearch } from "./Ideas/IdeaSearch"
 
 export const ApplicationViews = () => {
@@ -19,7 +21,7 @@ export const ApplicationViews = () => {
 
                     <Route exact path="/ideas">
                         <IdeaSearch />
-                        <IdeaList />
+                        <IncompIdeaList />
                    </Route>
                    <Route exact path="/ideas/create">
                        <IdeaForm />
@@ -27,7 +29,18 @@ export const ApplicationViews = () => {
                     <Route exact path="/ideas/edit/:ideaId(\d+)">
                         <IdeaForm />
                     </Route>
-                    
+
+                    <Route exact path="/completedIdeas">
+                        <IdeaSearch />
+                        <CompIdeaList />
+                    </Route>
+                    <Route exact path="/completedIdeas/create">
+                        <IdeaForm />
+                    </Route>
+                    <Route exact path="/completedIdeas/edit/:ideaId(\d+)">
+                        <IdeaForm />
+                    </Route>
+
                     <Route exact path="/artists">
                         <ArtistSearch />
                         <ArtistList />

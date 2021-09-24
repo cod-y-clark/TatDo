@@ -3,8 +3,8 @@ import { IdeaContext } from "./IdeaProvider"
 import { useParams, useHistory } from "react-router-dom"
 import "./Idea.css"
 
-export const IdeaDetail = (props) => {
-    const { ideas, getIdeas, deleteIdea } = useContext (IdeaContext)
+export const IncompIdeaDetail = (props) => {
+    const { ideas, getIncompleteIdeas, deleteIdea } = useContext (IdeaContext)
     const [ idea, setIdea ] = useState({ artist: {} })
 
     const { ideaId } = useParams()
@@ -18,7 +18,7 @@ export const IdeaDetail = (props) => {
         }
     }, [idea, ideas])
 
-    useEffect(() => {getIdeas()}, [])
+    useEffect(() => {getIncompleteIdeas()}, [])
 
     const handleDeleteIdea = () => {
         deleteIdea(idea.id)
@@ -37,6 +37,7 @@ export const IdeaDetail = (props) => {
         <div className="idea__budget"><b>Budget:</b> ${ idea.budget }</div>
         <div className="idea__color"><b>Black & Gray or Color:</b> { idea.color }</div>
         <div className="idea__appt_date"><b>Appointment Date:</b> { idea.appt_date }</div>
+        <div className="idea__final_cost"><b>Progress:</b> { idea.completed }</div>
 
         <button onClick={() => {history.push(`/ideas/edit/${idea.id}`)}}>Edit</button>
         <button onClick={handleDeleteIdea}>Delete Idea</button>

@@ -9,13 +9,14 @@ export const IdeaForm = () => {
     const { artists, getArtists } = useContext(ArtistContext)
     const [idea, setIdea] = useState({
         user_id: "",
-        artistId: "",
+        artistId: "Undecided",
         desc: "",
         body_loc: "",
         budget: "",
         color: "",
         appt_date: "",
-        completed: false
+        completed: false,
+        finalCost: ""
     });
     const [isLoading, setIsLoading] = useState(true);
     const { ideaId } = useParams();
@@ -42,7 +43,8 @@ export const IdeaForm = () => {
                 budget: idea.budget,
                 color: idea.color,
                 appt_date: idea.appt_date,
-                completed: idea.completed
+                completed: idea.completed,
+                finalCost: idea.finalCost
             })
                 .then(() => history.push("/ideas/"))
         } else {
@@ -53,7 +55,8 @@ export const IdeaForm = () => {
                 budget: idea.budget,
                 color: idea.color,
                 appt_date: idea.appt_date,
-                completed: idea.completed
+                completed: idea.completed,
+                finalCost: idea.finalCost
             })
                 .then(() => history.push("/ideas"))
         }
@@ -84,6 +87,7 @@ export const IdeaForm = () => {
                     <select value={idea.artistId} id="artistId" name="artistId" className="form-control"
                     onChange={handleControlledInputChange}>
                         <option value="0">Select Tattoo Artist</option>
+                        <option value="1">Undecided</option>
                         {artists.map(a => (
                             <option key={a.id} value={a.id}>
                                 {a.name}
@@ -134,6 +138,25 @@ export const IdeaForm = () => {
                     <label htmlFor="appt_date"><b>Appointment date:</b> </label>
                     <input type="date" id="appt_date" name="appt_date" required autoFocus className="form-control"
                     placeholder="Appointment date" onChange={handleControlledInputChange} defaultValue={idea.appt_date} />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="completed"><b>Progress:</b> </label>
+                    <select value={idea.completed} id="completed" name="completed" className="form-control"
+                    onChange={handleControlledInputChange}>
+                        <option value={false}>Not Started</option>
+                        <option value={true}>Completed</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="final_cost"><b>Final Cost:</b> </label>
+                    <input type="number" id="final_cost" name="final_cost" required autoFocus className="form-control"
+                    placeholder="Final Cost" onChange={handleControlledInputChange} defaultValue={idea.finalCost} />
                 </div>
             </fieldset>
             

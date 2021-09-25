@@ -9,12 +9,17 @@
 }
 
 .navbar__item {
-    margin-left: 40px;
-    margin-right: 40px;
     list-style-type: none;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .navbar__link {
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
 }
 
 a:hover {

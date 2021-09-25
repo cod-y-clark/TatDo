@@ -39,7 +39,7 @@ export const CompIdeaDetail = (props) => {
         <div className="idea__color"><b>Black & Gray or Color:</b> { idea.color }</div>
         <div className="idea__appt_date"><b>Appointment Date:</b> { idea.appt_date }</div>
 
-        <button onClick={handleDeleteIdea}>Delete Idea</button>
+        <button className="idea-edit-button" onClick={handleDeleteIdea}>Delete Idea</button>
     </section>
     )
 }

@@ -9,7 +9,7 @@ export const IdeaForm = () => {
     const { artists, getArtists } = useContext(ArtistContext)
     const [idea, setIdea] = useState({
         user_id: "",
-        artistId: "Undecided",
+        artistId: "",
         desc: "",
         body_loc: "",
         budget: "",
@@ -78,16 +78,15 @@ export const IdeaForm = () => {
     }, [])
 
     return (
+        
         <form className="ideaForm">
             <h2 className="ideaForm__title"><b>Add Idea</b></h2>
-
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="artistId"><b>Select Tattoo Artist:</b> </label>
                     <select value={idea.artistId} id="artistId" name="artistId" className="form-control"
                     onChange={handleControlledInputChange}>
                         <option value="0">Select Tattoo Artist</option>
-                        <option value="1">Undecided</option>
                         {artists.map(a => (
                             <option key={a.id} value={a.id}>
                                 {a.name}

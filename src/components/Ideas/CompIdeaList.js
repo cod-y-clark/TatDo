@@ -25,12 +25,14 @@ export const CompIdeaList = () => {
 
     return (
         <>
+            <div className="ideas-header">
             <h1>Completed Ideas</h1>
+            </div>
 
-            <button onClick={() => history.push("/ideas/create")}>
+            <button className="add-button" onClick={() => history.push("/ideas/create")}>
                 Add Idea
             </button>
-            <div className="ideas">
+            <div className="ideas-list">
             {
                 filteredIdeas.map(idea => {
                     return <CompIdeaDetail key={idea.id} idea={idea} />

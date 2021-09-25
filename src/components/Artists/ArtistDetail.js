@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { ArtistContext } from "./ArtistProvider"
 import { useParams, useHistory } from "react-router-dom"
+import igIcon from "../../images/igIcon.png"
 import "./Artist.css"
 
 export const ArtistDetail = (props) => {
@@ -35,8 +36,8 @@ export const ArtistDetail = (props) => {
         <div className="artist__ig"><b>Instagram:</b> <a href={ artist.ig_url } target="_blank">{ artist.ig_url }</a></div>
         <div className="artist__location"><b>Location:</b> { artist.location }</div>
 
-        <button onClick={() => {history.push(`/artists/edit/${artist.id}`)}}>Edit</button>
-        <button onClick={handleDeleteArtist}>Delete Artist</button>
+        <button className="artist-edit-button" onClick={() => {history.push(`/artists/edit/${artist.id}`)}}>Edit</button>
+        <button className="artist-edit-button" onClick={handleDeleteArtist}>Delete Artist</button>
     </section>
     )
 }

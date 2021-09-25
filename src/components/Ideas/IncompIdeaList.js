@@ -15,7 +15,9 @@ export const IncompIdeaList = () => {
         if (searchTerms !== "") {
             const subset = ideas.filter(idea => (
                 idea.desc.toLowerCase().includes(searchTerms.toLowerCase()) ||
-                idea.artist.name.toLowerCase().includes(searchTerms.toLowerCase())
+                idea.artist.name.toLowerCase().includes(searchTerms.toLowerCase()) ||
+                idea.body_loc.toLowerCase().includes(searchTerms.toLowerCase()) ||
+                idea.color.toLowerCase().includes(searchTerms.toLowerCase())
             ))
             setFiltered(subset)
         } else {
@@ -24,13 +26,15 @@ export const IncompIdeaList = () => {
     }, [searchTerms, ideas])
 
     return (
-        <>
+        <>  
+            <div className="ideas-header">
             <h1>Ideas</h1>
+            </div>
 
-            <button onClick={() => history.push("/ideas/create")}>
+            <button className="add-button" onClick={() => history.push("/ideas/create")}>
                 Add Idea
             </button>
-            <div className="ideas">
+            <div className="ideas-list">
             {
                 filteredIdeas.map(idea => {
                     return <IncompIdeaDetail key={idea.id} idea={idea} />

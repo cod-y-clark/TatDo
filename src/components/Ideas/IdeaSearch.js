@@ -9,7 +9,7 @@ export const IdeaSearch = () => {
         <>
             <div className="search">Search: </div>
                 <input type="text"
-                className="input--wide"
+                className="input--wide search"
                 onKeyUp={(event) => setSearchTerms(event.target.value)}
                 placeholder="Search for an idea" />
         </>

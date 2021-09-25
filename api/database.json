@@ -9,17 +9,80 @@
   ],
   "artists": [
     {
-      "id": 1,
-      "name": "Julian Bastttt",
-      "ig_url": "https://www.instagram.com/julianbast/",
-      "location": "Nashville, TN"
+      "name": "Chuck Paprocki",
+      "ig_url": "https://www.instagram.com/chuckieneedles/?hl=en",
+      "location": "Nashville, TN",
+      "id": 1
     },
     {
-      "name": "Chad Koeplinger",
-      "ig_url": "instagram.com/chadkoeplingertattoo",
+      "name": "Evan Davis",
+      "ig_url": "https://www.instagram.com/evandavistattoo/?hl=en",
+      "location": "Nashville, TN",
+      "id": 2
+    },
+    {
+      "name": "Jeff Zuck",
+      "ig_url": "https://www.instagram.com/jeffzuck/?hl=en",
+      "location": "Ann Arbor, MI",
+      "id": 3
+    },
+    {
+      "name": "Chad Koeplinger ",
+      "ig_url": "https://www.instagram.com/chadkoeplingertattoo/?hl=en",
       "location": "Nashville, TN",
       "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Jimmy Shy",
+      "ig_url": "https://www.instagram.com/jimmyshy/?hl=en",
+      "location": "Taipei, Taiwan"
     }
   ],
-  "ideas": []
+  "ideas": [
+    {
+      "artistId": 2,
+      "desc": "Snake and flower",
+      "body_loc": "Hand",
+      "budget": "800",
+      "color": "Black & Gray",
+      "appt_date": "2021-09-05",
+      "completed": "true",
+      "finalCost": "400",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "artistId": 1,
+      "desc": "Devil face",
+      "body_loc": "Left arm",
+      "budget": "900",
+      "color": "Color",
+      "appt_date": "2021-09-17",
+      "completed": "true",
+      "finalCost": "300"
+    },
+    {
+      "id": 3,
+      "artistId": 3,
+      "desc": "Butterfly",
+      "body_loc": "Full Stomach",
+      "budget": "1500",
+      "color": "Color",
+      "appt_date": "",
+      "completed": false,
+      "finalCost": ""
+    },
+    {
+      "artistId": 1,
+      "desc": "Wrathful Offering",
+      "body_loc": "Left thigh",
+      "budget": "700",
+      "color": "Color",
+      "appt_date": "",
+      "completed": false,
+      "finalCost": "",
+      "id": 4
+    }
+  ]
 }

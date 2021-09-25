@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { HomePage } from "./Homepage/Homepage"
 import { ArtistProvider } from "./Artists/ArtistProvider"
 import { ArtistDetail } from "./Artists/ArtistDetail"
 import { ArtistForm } from "./Artists/ArtistForm"
@@ -18,6 +19,10 @@ export const ApplicationViews = () => {
         <>
             <ArtistProvider>
                 <IdeaProvider>
+
+                    <Route exact path="/">
+                        <HomePage />
+                    </Route>
 
                     <Route exact path="/ideas">
                         <IdeaSearch />

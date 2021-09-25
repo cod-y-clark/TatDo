@@ -13,7 +13,10 @@ export const ArtistList = () => {
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const subset = artists.filter(artist => artist.name.toLowerCase().includes(searchTerms.toLowerCase()))
+            const subset = artists.filter(artist => (
+                artist.name.toLowerCase().includes(searchTerms.toLowerCase()) ||
+                artist.location.toLowerCase().includes(searchTerms.toLowerCase())
+            ))
             setFiltered(subset)
         } else {
             setFiltered(artists)
@@ -22,12 +25,14 @@ export const ArtistList = () => {
 
     return (
         <>
+            <div className="artists-header">
             <h1>Artists</h1>
+            </div>
 
-            <button onClick={() => history.push("/artists/create")}>
+            <button className="add-button" onClick={() => history.push("/artists/create")}>
                 Add Artist 
             </button>
-            <div className="artists">
+            <div className="artists-list">
             {
                 filteredArtists.map(artist => {
                     return <ArtistDetail key={artist.id} artist={artist} />

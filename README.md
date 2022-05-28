@@ -9,8 +9,9 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
 ## Setup
 1. `git clone git@github.com:cod-y-clark/TatDo.git`
 1. `cd` into the created directory
+1. Run `npm install`
 1. `json-server -p 8088 -w api/database.json`
-1. Type `npm start` to auto host the app.
+1. In a new terminal tab, type `npm start` to auto host the app.
 
 ## Using TatDo
 1. Create a new account. This is not true authentication - login information is saved to the JSON database and will be visible to anyone. Do not use your real info when testing this app

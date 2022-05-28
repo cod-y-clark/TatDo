@@ -11,6 +11,7 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
 1. `cd` into the created directory
 1. Run `npm install`
 1. `json-server -p 8088 -w api/database.json`
+	- If `json-server` is not installed on your local machine, run `sudo npm i -g json-server`
 1. In a new terminal tab, type `npm start` to auto host the app.
 
 ## Using TatDo

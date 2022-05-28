@@ -5,6 +5,18 @@
       "name": "Cody Clark",
       "email": "cody@cody.com",
       "password": "123"
+    },
+    {
+      "name": "Cody",
+      "email": "cody@cody.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "Not John",
+      "email": "john@notjohn.com",
+      "password": "notjohn",
+      "id": 3
     }
   ],
   "artists": [
@@ -31,26 +43,9 @@
       "ig_url": "https://www.instagram.com/chadkoeplingertattoo/?hl=en",
       "location": "Nashville, TN",
       "id": 4
-    },
-    {
-      "id": 5,
-      "name": "Jimmy Shy",
-      "ig_url": "https://www.instagram.com/jimmyshy/?hl=en",
-      "location": "Taipei, Taiwan"
     }
   ],
   "ideas": [
-    {
-      "artistId": 2,
-      "desc": "Snake and flower",
-      "body_loc": "Hand",
-      "budget": "800",
-      "color": "Black & Gray",
-      "appt_date": "2021-09-05",
-      "completed": "true",
-      "finalCost": "400",
-      "id": 1
-    },
     {
       "id": 2,
       "artistId": 1,
@@ -72,17 +67,6 @@
       "appt_date": "",
       "completed": false,
       "finalCost": ""
-    },
-    {
-      "artistId": 1,
-      "desc": "Wrathful Offering",
-      "body_loc": "Left thigh",
-      "budget": "700",
-      "color": "Color",
-      "appt_date": "",
-      "completed": false,
-      "finalCost": "",
-      "id": 4
     }
   ]
 }

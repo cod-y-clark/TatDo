@@ -1,5 +1,5 @@
 # TatDo
-![HomePage](TatDoREADME.png)
+![TatDo](TatDoREADME.png)
 
 TatDo allows users to keep track of tattoo artists they would like to be tattooed by, along with tattoo ideas. Rather than keeping notes of tattoo ideas in one app, and bookmarking artist profiles in another, TatDo lets users organize all of this in one place. TatDo is for tattoo collectors who need some structure for their enthusiasm. 
 
@@ -30,13 +30,13 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
       "name": "Chad Koeplinger ",
       "ig_url": "https://www.instagram.com/chadkoeplingertattoo/?hl=en",
       "location": "Nashville, TN",
-      "id": 4
+      "id": 1
     }
   ]
   "ideas": [
     {
-      "id": 3,
-      "artistId": 3,
+      "id": 1,
+      "artistId": 1,
       "desc": "Butterfly",
       "body_loc": "Full Stomach",
       "budget": "1500",
@@ -50,7 +50,7 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
 ```
 
 ## Technologies Used: 
-JavaScript
-[React](https://reactjs.org/)
-CSS
-HTML
+- JavaScript
+- [React](https://reactjs.org/)
+- CSS
+- HTML

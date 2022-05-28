@@ -30,6 +30,7 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
       "email": "cody@cody.com",
       "password": "123"
     }
+	],
   "artists": [
     {
       "name": "Chad Koeplinger ",
@@ -37,7 +38,7 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
       "location": "Nashville, TN",
       "id": 1
     }
-  ]
+  ],
   "ideas": [
     {
       "id": 1,

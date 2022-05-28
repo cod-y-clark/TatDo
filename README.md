@@ -9,11 +9,15 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
 ## Setup
 1. `git clone git@github.com:cod-y-clark/TatDo.git`
 1. `cd` into the created directory
-1. `mkdir api`
-1. `touch api/database.json`
-1.  add `{"users":[], "artists":[], "ideas":[]}` to database.json
 1. `json-server -p 8088 -w API/database.json`
 1. Type `npm start` to auto host the app.
+
+## Using TatDo
+1. Create a new account. This is not true authentication - login information is saved to the JSON database and will be visible to anyone. Do not use your real info when testing this app
+1. Go to the "Artists" page and add a tattoo artist you're interested in collecting work from. 
+1. Navigate to the "Ideas" page to add an idea for a tattoo, and select one of the previously added Artists. 
+1. View completed "Ideas" on the respective page linked in the navigation bar. 
+1. Edit "Ideas" and "Artists" as necessary
 
 ## Example Data
 ```json

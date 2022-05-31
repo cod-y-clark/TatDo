@@ -56,7 +56,7 @@ TatDo allows users to keep track of tattoo artists they would like to be tattooe
 }
 ```
 
-## Technologies Used: 
+## Technologies Used 
 - JavaScript
 - [React](https://reactjs.org/)
 - CSS
